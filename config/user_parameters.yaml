@@ -1,0 +1,184 @@
+# ============================================================================
+# SpatialCoherence Configuration File
+# ============================================================================
+# Customize these parameters for your spatial transcriptomics data
+# Author: Ateeq Khaliq (akhaliq@iu.edu)
+# Version: 1.0.0
+
+# DATA STRUCTURE PARAMETERS
+# ============================================================================
+# Modify these to match your Seurat object metadata columns
+data_columns:
+  # Column name containing cell type/ecotype classifications
+  # Common names: "seurat_clusters", "cell_type", "clusters", "annotations"
+  ecotype_column: "seurat_clusters"
+  
+  # Column name containing sample identifiers  
+  # Common names: "orig.ident", "sample_id", "library_id", "patient"
+  sample_column: "orig.ident"
+  
+  # Column name containing treatment information (optional)
+  # Common names: "treatment", "condition", "group", "therapy"
+  treatment_column: null  # Set to null if no treatment data
+  
+  # Optional: Additional columns for analysis
+  patient_column: null    # Patient identifiers
+  batch_column: null      # Batch or experimental batch
+
+# TREATMENT DEFINITIONS (Optional - only if you have treatment data)
+# ============================================================================
+treatment_groups:
+  # Define which values represent treated samples
+  treated_values: ["treated", "drug", "therapy"]
+  
+  # Define which values represent untreated/control samples  
+  untreated_values: ["control", "untreated", "vehicle"]
+  
+  # How to handle missing treatment values
+  handle_missing: "exclude"  # Options: "exclude", "separate_group"
+
+# SPATIAL ANALYSIS PARAMETERS
+# ============================================================================
+spatial_coherence:
+  # Number of nearest neighbors to consider for each spot
+  n_neighbors: 6
+  
+  # Number of random iterations for null model calculation
+  n_random_iterations: 100
+  
+  # Distance calculation method
+  distance_method: "euclidean"  # Options: "euclidean", "manhattan"
+  
+  # Distance tolerance factor (multiplier for typical distance)
+  distance_tolerance: 0.3
+  
+  # Minimum number of spots required per cell type for analysis
+  min_spots_per_ecotype: 5
+  
+  # Minimum number of spots required per sample for analysis
+  min_spots_per_sample: 20
+
+# ORGANIZATION CLASSIFICATION PARAMETERS
+# ============================================================================
+organization:
+  # Method for classifying organized vs disorganized regions
+  classification_method: "threshold"  # Options: "threshold", "tertile", "quantile"
+  
+  # Threshold for organized vs disorganized (if using threshold method)
+  coherence_threshold: 0.47
+  
+  # Minimum abundance threshold for including cell types in analysis
+  abundance_threshold: 0.05  # 5% minimum abundance
+  
+  # Percentile for automatic threshold calculation
+  threshold_percentile: 0.75  # Use 75th percentile
+
+# STATISTICAL ANALYSIS PARAMETERS
+# ============================================================================
+statistics:
+  # Significance level
+  alpha_level: 0.05
+  
+  # Multiple testing correction method
+  multiple_testing_correction: "fdr"  # Options: "fdr", "bonferroni", "none"
+  
+  # Minimum sample size for statistical tests
+  min_samples_for_test: 3
+  
+  # Which statistical tests to perform
+  tests:
+    treatment_effect: true
+    ecotype_composition: true
+    organization_classification: true
+
+# VISUALIZATION PARAMETERS
+# ============================================================================
+visualization:
+  # Figure dimensions
+  figure_width: 12
+  figure_height: 8
+  
+  # Point sizes for spatial plots
+  point_size: 0.5
+  point_alpha: 0.7
+  
+  # Color schemes
+  organization_colors:
+    organized: "#2E8B57"      # Sea green
+    intermediate: "#FFD700"   # Gold
+    disorganized: "#DC143C"   # Crimson
+  
+  # Output formats
+  output_format: ["pdf", "png"]
+  dpi: 300
+  
+  # Save individual plots
+  save_individual_plots: true
+
+# OUTPUT PARAMETERS
+# ============================================================================
+output:
+  # Base output directory
+  output_dir: "spatial_coherence_results"
+  
+  # Create subdirectories for different output types
+  subdirs:
+    figures: "figures"
+    data: "processed_data"
+    statistics: "statistics"
+  
+  # Save intermediate results
+  save_intermediate: false
+  
+  # File naming
+  timestamp_files: true
+
+# ADVANCED PARAMETERS
+# ============================================================================
+advanced:
+  # Parallel processing
+  use_parallel: false
+  n_cores: null  # null = auto-detect
+  
+  # Reproducibility
+  random_seed: 123
+  
+  # Logging level
+  log_level: "INFO"  # Options: "DEBUG", "INFO", "WARNING", "ERROR"
+  
+  # Memory management for large datasets
+  chunk_size: 1000
+
+# EXAMPLE CONFIGURATIONS FOR DIFFERENT SCENARIOS
+# ============================================================================
+# Uncomment and modify these sections for common use cases:
+
+# For 10X Visium data:
+# data_columns:
+#   ecotype_column: "seurat_clusters"
+#   sample_column: "orig.ident"
+
+# For cancer treatment studies:
+# data_columns:
+#   ecotype_column: "cell_type"
+#   sample_column: "patient_id" 
+#   treatment_column: "treatment_group"
+# treatment_groups:
+#   treated_values: ["chemotherapy", "immunotherapy", "combination"]
+#   untreated_values: ["control", "untreated"]
+
+# For developmental studies:
+# data_columns:
+#   ecotype_column: "cell_type"
+#   sample_column: "timepoint"
+#   treatment_column: "condition"
+
+# METADATA
+# ============================================================================
+config_info:
+  version: "1.0.0"
+  author: "Ateeq Khaliq"
+  email: "akhaliq@iu.edu"
+  institution: "Indiana University"
+  created: "2024-12-19"
+  description: "Configuration template for SpatialCoherence analysis"
