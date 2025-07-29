@@ -4,5 +4,5 @@
 \alias{SpatialCoherence-package}
 \title{SpatialCoherence Package}
 \description{
-Spatial organization analysis
+Comprehensive spatial organization analysis for spatial transcriptomics
 }

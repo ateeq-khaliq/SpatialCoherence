@@ -2,12 +2,17 @@
 % Please edit documentation in R/SpatialCoherence.R
 \name{run_spatial_analysis}
 \alias{run_spatial_analysis}
-\title{Run Spatial Analysis}
+\title{Run Comprehensive Spatial Analysis}
 \usage{
 run_spatial_analysis(
   seurat_object,
+  ecotype_column,
+  sample_column = "orig.ident",
+  treatment_column = NULL,
+  output_dir = "spatial_coherence_results",
+  save_csvs = TRUE,
+  create_plots = TRUE,
   config_path = NULL,
-  output_dir = NULL,
   use_real_algorithm = TRUE,
   n_permutations = 100,
   parallel = FALSE,
@@ -16,11 +21,21 @@ run_spatial_analysis(
 )
 }
 \arguments{
-\item{seurat_object}{Seurat object}
+\item{seurat_object}{Seurat object with spatial data}
 
-\item{config_path}{Config path}
+\item{ecotype_column}{Column name for ecotypes}
 
-\item{output_dir}{Output directory}
+\item{sample_column}{Column name for samples}
+
+\item{treatment_column}{Column name for treatment (optional)}
+
+\item{output_dir}{Directory to save results and plots}
+
+\item{save_csvs}{Whether to save CSV files (default: TRUE)}
+
+\item{create_plots}{Whether to create plots (default: TRUE)}
+
+\item{config_path}{Config path (optional)}
 
 \item{use_real_algorithm}{Use real algorithm}
 
@@ -33,5 +48,5 @@ run_spatial_analysis(
 \item{verbose}{Verbose}
 }
 \description{
-Run Spatial Analysis
+Run Comprehensive Spatial Analysis
 }

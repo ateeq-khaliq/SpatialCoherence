@@ -2,15 +2,15 @@
 % Please edit documentation in R/SpatialCoherence.R
 \name{calculate_spatial_coherence}
 \alias{calculate_spatial_coherence}
-\title{Calculate Spatial Coherence}
+\title{Calculate Spatial Coherence (Enhanced)}
 \usage{
 calculate_spatial_coherence(seurat_object, ecotype_column)
 }
 \arguments{
-\item{seurat_object}{Seurat object}
+\item{seurat_object}{Seurat object with spatial data}
 
-\item{ecotype_column}{Column name}
+\item{ecotype_column}{Column name for ecotypes}
 }
 \description{
-Calculate Spatial Coherence
+Calculate Spatial Coherence (Enhanced)
 }

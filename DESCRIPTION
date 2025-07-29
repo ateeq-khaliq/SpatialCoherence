@@ -23,7 +23,8 @@ Depends:
 Imports:
     ggplot2 (>= 3.3.0),
     yaml (>= 2.2.0),
-    stats
+    stats,
+    utils
 Suggests: 
     testthat (>= 3.0.0)
 SystemRequirements: R (>= 4.1.0)
