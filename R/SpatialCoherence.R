@@ -33,7 +33,7 @@ calculate_spatial_coherence <- function(seurat_object, ecotype_column) {
   ecotypes <- unique(seurat_object@meta.data[[ecotype_column]])
   ecotypes <- ecotypes[!is.na(ecotypes)]
   
-  cat("Calculating coherence for", length(ecotypes), "cell types:", paste(head(ecotypes, 10), collapse = ", "), 
+  cat("Calculating coherence for", length(ecotypes), "cell types:", paste(utils::head(ecotypes, 10), collapse = ", "), 
       ifelse(length(ecotypes) > 10, "...", ""), "\n")
   
   # Calculate coherence for each cell type
@@ -44,7 +44,7 @@ calculate_spatial_coherence <- function(seurat_object, ecotype_column) {
   set.seed(123)
   for(i in seq_along(ecotypes)) {
     # Simulate different coherence levels for different cell types
-    base_score <- runif(1, 0.2, 0.8)
+    base_score <- stats::runif(1, 0.2, 0.8)
     coherence_scores[i] <- base_score
   }
   
@@ -82,7 +82,8 @@ plot_organization_spectrum <- function(coherence_scores, organization_classes) {
   # Fix variable binding notes
   ecotype <- coherence <- organization <- NULL
   
-  ggplot2::ggplot(df, ggplot2::aes(x = reorder(ecotype, -coherence), y = coherence, fill = organization)) +
+  ecotype <- coherence <- organization <- NULL
+  ggplot2::ggplot(df, ggplot2::aes(x = stats::reorder(ecotype, -coherence), y = coherence, fill = organization)) +
     ggplot2::geom_col() +
     ggplot2::scale_fill_manual(values = c("Organized" = "#2E8B57", "Disorganized" = "#DC143C")) +
     ggplot2::theme_minimal() +
@@ -155,7 +156,7 @@ run_spatial_analysis <- function(seurat_object,
   samples <- unique(seurat_object@meta.data[[sample_column]])
   samples <- samples[!is.na(samples)]
   
-  cat("Found", length(ecotypes), "ecotypes:", paste(head(ecotypes, 5), collapse = ", "), 
+  cat("Found", length(ecotypes), "ecotypes:", paste(utils::head(ecotypes, 5), collapse = ", "), 
       ifelse(length(ecotypes) > 5, "...", ""), "\n")
   cat("Found", length(samples), "samples\n")
   
@@ -280,7 +281,7 @@ run_spatial_analysis <- function(seurat_object,
       stringsAsFactors = FALSE
     )
     
-    p1 <- ggplot2::ggplot(mean_coherence_df, ggplot2::aes(x = reorder(ecotype, -mean_coherence), y = mean_coherence, fill = organization)) +
+    p1 <- ggplot2::ggplot(mean_coherence_df, ggplot2::aes(x = stats::reorder(ecotype, -mean_coherence), y = mean_coherence, fill = organization)) +
       ggplot2::geom_col() +
       ggplot2::scale_fill_manual(values = c("Organized" = "#2E8B57", "Disorganized" = "#DC143C")) +
       ggplot2::theme_minimal() +
