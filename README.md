@@ -7,7 +7,7 @@
 
 **SpatialCoherence** is a comprehensive R package for analyzing spatial organization patterns in tissues using **spatial transcriptomics data**. Quantify tissue architecture, classify organized vs. disorganized regions, and analyze treatment effects on spatial patterns.
 
-> **👨‍💻 Developed by:** [Ateeq Khaliq](https://scholar.google.com/citations?user=uciT_dkAAAAJ&hl=en) | Indiana University  
+> **Developed by:** [Ateeq Khaliq](https://scholar.google.com/citations?user=uciT_dkAAAAJ&hl=en) | Indiana University  
 > **📧 Contact:** [akhaliq@iu.edu](mailto:akhaliq@iu.edu) | **🆔 ORCID:** [0000-0001-5200-081X](https://orcid.org/0000-0001-5200-081X)
 
 ## 🚀 **Quick Start**
