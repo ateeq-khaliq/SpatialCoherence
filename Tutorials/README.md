@@ -1,7 +1,5 @@
 # 🧬 SpatialCoherence Tutorial & Vignettes
 
-<div align="center">
-
 ![SpatialCoherence Logo](https://img.shields.io/badge/SpatialCoherence-v1.0.0-brightgreen?style=for-the-badge&logo=r&logoColor=white)
 
 **Complete Guide to Spatial Organization Analysis in Spatial Transcriptomics**
@@ -11,8 +9,6 @@
 [![R Version](https://img.shields.io/badge/R-%E2%89%A5%204.1.0-blue?style=flat-square&logo=r)](https://www.r-project.org/)
 
 *Master spatial coherence analysis with step-by-step tutorials, real-world examples, and best practices*
-
-</div>
 
 ---
 
@@ -60,8 +56,6 @@ Real-world research
 
 ## 🎯 **Quick Navigation**
 
-<div align="center">
-
 | 📖 Tutorial | ⏱️ Duration | 🎓 Level | 📋 Prerequisites |
 |-------------|------------|----------|------------------|
 | [**🔧 Installation Guide**](#installation) | 5 min | Beginner | R ≥ 4.1.0 |
@@ -70,8 +64,6 @@ Real-world research
 | [**🔬 Cancer Research Example**](#cancer-example) | 20 min | Intermediate | Basic R |
 | [**🧪 Treatment Analysis**](#treatment-analysis) | 25 min | Advanced | Statistics knowledge |
 | [**⚙️ Parameter Optimization**](#parameter-guide) | 15 min | Advanced | Domain expertise |
-
-</div>
 
 ---
 
@@ -112,9 +104,7 @@ Real-world research
 
 ## <a id="installation"></a>🔧 **Installation Guide**
 
-<div align="center">
-<img src="https://img.shields.io/badge/Step%201-Install%20Package-blue?style=for-the-badge" />
-</div>
+![Step 1](https://img.shields.io/badge/Step%201-Install%20Package-blue?style=for-the-badge)
 
 ### **Prerequisites**
 ```r
@@ -138,17 +128,13 @@ library(SpatialCoherence)
 get_package_version()
 ```
 
-<div align="center">
-✅ <b>Success!</b> You should see: <code>[1] "1.0.0"</code>
-</div>
+**✅ Success!** You should see: `[1] "1.0.0"`
 
 ---
 
 ## <a id="quick-start"></a>⚡ **Quick Start (10 Minutes)**
 
-<div align="center">
-<img src="https://img.shields.io/badge/Quick%20Start-10%20Minutes-green?style=for-the-badge" />
-</div>
+![Quick Start](https://img.shields.io/badge/Quick%20Start-10%20Minutes-green?style=for-the-badge)
 
 ### **Step 1: Get Your Data Ready**
 ```r
@@ -198,17 +184,13 @@ plot <- plot_organization_spectrum(coherence_scores, organization)
 print(plot)
 ```
 
-<div align="center">
-🎉 <b>Congratulations!</b> You've completed your first spatial coherence analysis!
-</div>
+**🎉 Congratulations!** You've completed your first spatial coherence analysis!
 
 ---
 
 ## <a id="complete-workflow"></a>📊 **Complete Workflow (30 Minutes)**
 
-<div align="center">
-<img src="https://img.shields.io/badge/Complete%20Workflow-30%20Minutes-orange?style=for-the-badge" />
-</div>
+![Complete Workflow](https://img.shields.io/badge/Complete%20Workflow-30%20Minutes-orange?style=for-the-badge)
 
 ### **Phase 1: Data Preparation**
 
@@ -326,9 +308,7 @@ print(plot2)
 
 ## <a id="cancer-example"></a>🔬 **Cancer Research Example (20 Minutes)**
 
-<div align="center">
-<img src="https://img.shields.io/badge/Cancer%20Research-20%20Minutes-red?style=for-the-badge" />
-</div>
+![Cancer Research](https://img.shields.io/badge/Cancer%20Research-20%20Minutes-red?style=for-the-badge)
 
 ### **Scenario: Tumor Spatial Architecture Analysis**
 
@@ -418,9 +398,7 @@ if(stromal_coherence > 0.6) {
 
 ## <a id="treatment-analysis"></a>🧪 **Treatment Analysis (25 Minutes)**
 
-<div align="center">
-<img src="https://img.shields.io/badge/Treatment%20Analysis-25%20Minutes-purple?style=for-the-badge" />
-</div>
+![Treatment Analysis](https://img.shields.io/badge/Treatment%20Analysis-25%20Minutes-purple?style=for-the-badge)
 
 ### **Scenario: Before vs. After Immunotherapy**
 
@@ -538,9 +516,7 @@ if(pre_treatment["Vasculature"] > 0.7) {
 
 ## <a id="parameter-guide"></a>⚙️ **Parameter Optimization Guide (15 Minutes)**
 
-<div align="center">
-<img src="https://img.shields.io/badge/Parameter%20Guide-15%20Minutes-gold?style=for-the-badge" />
-</div>
+![Parameter Guide](https://img.shields.io/badge/Parameter%20Guide-15%20Minutes-gold?style=for-the-badge)
 
 ### **Coherence Threshold Selection**
 
@@ -684,14 +660,10 @@ names(coherence_scores) <- cluster_names
 
 ## 📞 **Getting Help & Support**
 
-<div align="center">
-
 ### 🤝 **Community Support**
 
 [![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github)](https://github.com/ateeq-khaliq/SpatialCoherence/issues)
 [![Email](https://img.shields.io/badge/Email-akhaliq%40iu.edu-blue?style=for-the-badge&logo=gmail)](mailto:akhaliq@iu.edu)
-
-</div>
 
 **Before asking for help, please:**
 1. ✅ Check this tutorial for your specific use case
@@ -744,27 +716,20 @@ If you use SpatialCoherence in your research, please cite:
 **Original Methodology:**
 > Greenwald, A.C., Galili Darnell, N., Hoefflin, R., et al. (2024). Integrative spatial analysis reveals a multi-layered organization of glioblastoma. *Cell*, 187(10), 2485-2501.e26. https://doi.org/10.1016/j.cell.2024.04.020
 
+
 ---
 
 ## 🏆 **Acknowledgments**
-
-<div align="center">
 
 **Developed by [Ateeq Khaliq](https://scholar.google.com/citations?user=uciT_dkAAAAJ&hl=en)**  
 Indiana University • ORCID: [0000-0001-5200-081X](https://orcid.org/0000-0001-5200-081X)
 
 *Special thanks to the spatial transcriptomics community and all package contributors*
 
-</div>
-
 ---
-
-<div align="center">
 
 ### ⭐ **Found this helpful? Give us a star on GitHub!** ⭐
 
 [![Star on GitHub](https://img.shields.io/github/stars/ateeq-khaliq/SpatialCoherence?style=social)](https://github.com/ateeq-khaliq/SpatialCoherence)
 
 **Happy analyzing! 🧬✨**
-
-</div>
