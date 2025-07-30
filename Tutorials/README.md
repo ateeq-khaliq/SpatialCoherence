@@ -34,7 +34,7 @@ SpatialCoherence quantifies how **spatial ecotypes** (multicellular tissue envir
 - Use predetermined biological knowledge for classification
 - Validate pre-existing hypotheses about organization
 
-**✅ What SpatialCoherence DOES Do:**
+** What SpatialCoherence DOES Do:**
 - **Discovers** which spatial ecotypes are organized vs disorganized
 - **Measures** spatial coherence objectively using neighborhood statistics
 - **Classifies** based on user-defined, data-driven criteria
@@ -773,16 +773,16 @@ enhanced_analysis = TRUE
 ```
 
 **When to use enhanced:**
-- ✅ Publication-quality results needed
-- ✅ Treatment effect analysis
-- ✅ Compositional analysis required
-- ✅ High-precision spatial patterns
+-  Publication-quality results needed
+-  Treatment effect analysis
+-  Compositional analysis required
+-  High-precision spatial patterns
 
 **When to use basic:**
-- ✅ Initial data exploration
-- ✅ Parameter optimization
-- ✅ Large datasets (speed concerns)
-- ✅ Proof-of-concept analysis
+-  Initial data exploration
+-  Parameter optimization
+-  Large datasets (speed concerns)
+-  Proof-of-concept analysis
 
 ---
 
@@ -811,7 +811,7 @@ validation <- validate_spatial_data(
 if (!validation$valid) {
   stop("Data validation failed: ", validation$messages)
 } else {
-  cat("✅ Data validation passed\n")
+  cat(" Data validation passed\n")
   if (length(validation$messages) > 0) {
     cat("Warnings:\n")
     for(msg in validation$messages) cat(" ", msg, "\n")
@@ -984,7 +984,7 @@ validation <- validate_spatial_data(
 )
 
 if (!validation$valid) stop(validation$messages)
-cat("✅ PDAC data validated\n")
+cat(" PDAC data validated\n")
 cat("Samples:", length(unique(pdac$library_id)), "\n")
 cat("Spots:", ncol(pdac), "\n") 
 cat("Spatial ecotypes:", length(unique(pdac$CompositionCluster_SE)), "\n\n")
@@ -1419,7 +1419,7 @@ sample_analysis <- classify_samples(your_results)
 coherence_threshold = 1.5  # ❌ WRONG
 
 # Solution: Use valid range
-coherence_threshold = 0.47  # ✅ CORRECT (0-1 range)
+coherence_threshold = 0.47  #  CORRECT (0-1 range)
 ```
 
 #### **Error: "Ecotype column not found in metadata"**
@@ -1429,7 +1429,7 @@ ecotype_column = "wrong_column_name"  # ❌ WRONG
 
 # Solution: Check your data
 colnames(your_seurat@meta.data)  # See available columns
-ecotype_column = "CompositionCluster_SE"  # ✅ CORRECT
+ecotype_column = "CompositionCluster_SE"  #  CORRECT
 ```
 
 #### **Warning: "min_spots_per_ecotype < 10 may lead to unreliable results"**
@@ -1440,7 +1440,7 @@ min_spots_per_ecotype = 5  # ❌ TOO LOW
 # Solution: Check your data and adjust
 ecotype_counts <- table(your_seurat@meta.data$ecotype_column)
 print(ecotype_counts)  # See actual counts
-min_spots_per_ecotype = 50  # ✅ REASONABLE
+min_spots_per_ecotype = 50  #  REASONABLE
 ```
 
 #### **Issue: "All ecotypes classified as disorganized"**
@@ -1454,7 +1454,7 @@ print(distribution$summary)
 print(distribution$suggested_thresholds)
 
 # Use data-appropriate threshold
-coherence_threshold = 0.40  # ✅ ADJUSTED FOR DATA
+coherence_threshold = 0.40  #  ADJUSTED FOR DATA
 ```
 
 #### **Issue: "No treatment effects detected"**
@@ -1615,7 +1615,7 @@ Code for reproducing all analyses is available at [your repository/supplement].
 
 ## 🎯 Best Practices Summary
 
-### ✅ **Do's**
+###  **Do's**
 
 1. **Always validate your data first**
    ```r
@@ -1852,7 +1852,7 @@ If you use SpatialCoherence in your research, please cite:
 @software{khaliq2024spatialcoherence,
   title = {SpatialCoherence: Spatial Ecotype Organization Analysis for Spatial Transcriptomics},
   author = {Ateeq Khaliq},
-  year = {2024},
+  year = {2026},
   version = {1.0.0},
   url = {https://github.com/ateeq-khaliq/SpatialCoherence},
   note = {R package for discovering spatial organization patterns in multicellular ecotypes}
@@ -1865,10 +1865,10 @@ If you use SpatialCoherence in your research, please cite:
 
 SpatialCoherence provides a powerful, objective framework for discovering spatial organization patterns in spatial transcriptomics data. By following this tutorial, you can:
 
-✅ **Discover** which spatial ecotypes are organized vs disorganized in your data  
-✅ **Analyze** treatment effects on spatial tissue architecture  
-✅ **Generate** publication-quality results with proper statistical validation  
-✅ **Interpret** findings in biological context with confidence  
+ **Discover** which spatial ecotypes are organized vs disorganized in your data  
+ **Analyze** treatment effects on spatial tissue architecture  
+ **Generate** publication-quality results with proper statistical validation  
+ **Interpret** findings in biological context with confidence  
 
 **Happy analyzing! 🧬✨**
 
