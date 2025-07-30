@@ -1,31 +1,23 @@
 Package: SpatialCoherence
-Title: Spatial Organization Analysis for Spatial Transcriptomics
+Title: Comprehensive Spatial Ecotype Organization Analysis
 Version: 1.0.0
-Date: 2024-12-19
-Authors@R: 
-    person("Ateeq", "Khaliq", , "akhaliq@iu.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0001-5200-081X"))
-Maintainer: Ateeq Khaliq <akhaliq@iu.edu>
-Description: A comprehensive R package for analyzing spatial organization patterns 
-    in tissues using spatial transcriptomics data. Provides flexible, user-parameterized 
-    framework for quantifying spatial coherence, classifying tissue organization, 
-    and analyzing treatment effects on tissue architecture. Compatible with Visium, 
-    Slide-seq, MERFISH, and other spatial transcriptomics platforms. Based on 
-    methodology adapted from Tirosh et al. (Nature, 2016).
+Authors@R: person("Ateeq", "Khaliq", email = "akhaliq@iu.edu", role = c("aut", "cre"))
+Description: Quantifies spatial organization patterns of multicellular ecotypes in spatial transcriptomics data. 
+    Discovers which spatial environments form structured vs disorganized patterns using neighborhood-based algorithms.
+    Provides user-defined classification thresholds and comprehensive analysis workflows.
 License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
+LazyData: true
 RoxygenNote: 7.3.2
-URL: https://github.com/ateeq-khaliq/SpatialCoherence
-BugReports: https://github.com/ateeq-khaliq/SpatialCoherence/issues
-Depends: 
-    R (>= 4.1.0)
 Imports:
-    ggplot2 (>= 3.3.0),
-    yaml (>= 2.2.0),
     stats,
-    utils
-Suggests: 
-    testthat (>= 3.0.0)
-SystemRequirements: R (>= 4.1.0)
-Config/testthat/edition: 3
+    utils,
+    grDevices
+Suggests:
+    ggplot2,
+    reshape2,
+    dplyr,
+    ComplexHeatmap,
+    circlize,
+    yaml,
+    Seurat

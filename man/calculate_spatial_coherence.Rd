@@ -4,12 +4,21 @@
 \alias{calculate_spatial_coherence}
 \title{Calculate Spatial Coherence (Enhanced)}
 \usage{
-calculate_spatial_coherence(seurat_object, ecotype_column)
+calculate_spatial_coherence(
+  seurat_object,
+  ecotype_column,
+  use_advanced_algorithm = FALSE,
+  sample_column = "orig.ident"
+)
 }
 \arguments{
 \item{seurat_object}{Seurat object with spatial data}
 
 \item{ecotype_column}{Column name for ecotypes}
+
+\item{use_advanced_algorithm}{Use advanced algorithm}
+
+\item{sample_column}{Sample column for advanced algorithm}
 }
 \description{
 Calculate Spatial Coherence (Enhanced)
