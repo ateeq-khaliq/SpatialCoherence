@@ -39,11 +39,11 @@ print(results$organization_results)
 
 ## 🔬 **Key Features**
 
-- **✅ Sample-wise Analysis**: Per-sample, per-ecotype coherence calculation
-- **✅ CSV Export**: Automatic saving of all results to CSV files
-- **✅ Treatment Analysis**: Compare spatial organization across conditions
-- **✅ Publication Plots**: Professional visualization suite
-- **✅ Multiple Platforms**: Visium, Slide-seq, MERFISH, seqFISH+ support
+- ** Sample-wise Analysis**: Per-sample, per-ecotype coherence calculation
+- ** CSV Export**: Automatic saving of all results to CSV files
+- ** Treatment Analysis**: Compare spatial organization across conditions
+- ** Publication Plots**: Professional visualization suite
+- ** Multiple Platforms**: Visium, Slide-seq, MERFISH, seqFISH+ support
 
 ## 📊 **Output Files**
 
@@ -57,11 +57,11 @@ The package automatically generates:
 
 | Platform | Spot Resolution | Status | Features |
 |----------|----------------|--------|----------|
-| **10X Visium** | 55μm | ✅ Tested | Full analysis suite |
-| **Slide-seq** | 10μm | ✅ Compatible | High-resolution analysis |
-| **MERFISH** | Single-cell | ✅ Compatible | Advanced neighbor detection |
-| **seqFISH+** | Single-cell | ✅ Compatible | Multi-scale analysis |
-| **Xenium** | Subcellular | ✅ Compatible | Ultra-high resolution |
+| **10X Visium** | 55μm |  Tested | Full analysis suite |
+| **Slide-seq** | 10μm |  Compatible | High-resolution analysis |
+| **MERFISH** | Single-cell |  Compatible | Advanced neighbor detection |
+| **seqFISH+** | Single-cell |  Compatible | Multi-scale analysis |
+| **Xenium** | Subcellular |  Compatible | Ultra-high resolution |
 
 ## 🎯 **Citation**
 
