@@ -76,8 +76,7 @@ https://github.com/ateeq-khaliq/SpatialCoherence
 ## 📚 **References**
 
 Based on methodology from:
-Tirosh, I., et al. (2016). Single-cell RNA-seq supports a developmental 
-hierarchy in human oligodendroglioma. Nature, 539(7628), 309-313.
+Tirosh, I., et al. (2024). Integrative spatial analysis reveals a multi-layered organization of glioblastoma.
 
 ## 🔧 **Support**
 
